@@ -1,5 +1,6 @@
 // Лабораторная работа № 1. Вариант N 27.
 // Выполнил: Комаровская Д. Е., группа ПИ-52.
+//heeeeey
 #include <iostream>
 #include <windows.h> 
 using namespace std;
