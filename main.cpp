@@ -1,66 +1,66 @@
-// Лабораторная работа № 1. Вариант N 27.
-// Выполнил: Комаровская Д. Е., группа ПИ-52.
+п»ї// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„– 1. Р’Р°СЂРёР°РЅС‚ N 27.
+// Р’С‹РїРѕР»РЅРёР»: РљРѕРјР°СЂРѕРІСЃРєР°СЏ Р”. Р•., РіСЂСѓРїРїР° РџР-52.
 //heeeeey
 #include <iostream>
 #include <windows.h> 
 using namespace std;
 
-// ===== Расчётные функции варианта =====
+// ===== Р Р°СЃС‡С‘С‚РЅС‹Рµ С„СѓРЅРєС†РёРё РІР°СЂРёР°РЅС‚Р° =====
 
-// Плотность
+// РџР»РѕС‚РЅРѕСЃС‚СЊ
 double density(double m, double V) {
 	return m / V;
 }
 
-//Масса
+//РњР°СЃСЃР°
 double massFromDensity(double rho, double V) {
 	return rho * V;
 }
 
-//Объем 
+//РћР±СЉРµРј 
 double volumeFromDensity(double m, double rho) {
 	return m / rho;
 }
 
 
-// ===== Главная функция: меню =====
+// ===== Р“Р»Р°РІРЅР°СЏ С„СѓРЅРєС†РёСЏ: РјРµРЅСЋ =====
 
 int main() {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
 	int choice;
 	double m, rho, V;
 
 	do {
-		cout << "\n=== Программа расчетов. Вариант 27\n";
-		cout << "1. Плотность\n";
-		cout << "2.Масса\n";
-		cout << "3.Объем\n";
-		cout << "0. Выход\n";
-		cout << "Выберите пункт: ";
+		cout << "\n=== РџСЂРѕРіСЂР°РјРјР° СЂР°СЃС‡РµС‚РѕРІ. Р’Р°СЂРёР°РЅС‚ 27\n";
+		cout << "1. РџР»РѕС‚РЅРѕСЃС‚СЊ\n";
+		cout << "2.РњР°СЃСЃР°\n";
+		cout << "3.РћР±СЉРµРј\n";
+		cout << "0. Р’С‹С…РѕРґ\n";
+		cout << "Р’С‹Р±РµСЂРёС‚Рµ РїСѓРЅРєС‚: ";
 		cin >> choice;
 
 		switch (choice) {
 		case 1:
-			cout << "Введите массу m и объем V: ";
+			cout << "Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ m Рё РѕР±СЉРµРј V: ";
 			cin >> m >> V;
-			cout << "Плотность = " << density(m, V) << "\n";
+			cout << "РџР»РѕС‚РЅРѕСЃС‚СЊ = " << density(m, V) << "\n";
 			break;
 		case 2:
-			cout << "Введите плотность rho и объем V: ";
+			cout << "Р’РІРµРґРёС‚Рµ РїР»РѕС‚РЅРѕСЃС‚СЊ rho Рё РѕР±СЉРµРј V: ";
 			cin >> rho >> V;
-			cout << "Масса = " << massFromDensity(rho, V) << "\n";
+			cout << "РњР°СЃСЃР° = " << massFromDensity(rho, V) << "\n";
 			break;
 		case 3:
-			cout << "Введите массу m и плотность rho: ";
+			cout << "Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ m Рё РїР»РѕС‚РЅРѕСЃС‚СЊ rho: ";
 			cin >> m >> rho;
-			cout << "Объем = " << volumeFromDensity(m,rho) << "\n";
+			cout << "РћР±СЉРµРј = " << volumeFromDensity(m,rho) << "\n";
 			break;
 		case 0:
-			cout << "Работа завершена.\n";
+			cout << "Р Р°Р±РѕС‚Р° Р·Р°РІРµСЂС€РµРЅР°.\n";
 			break;
 		default:
-			cout << "Такого пункта нет.\n";
+			cout << "РўР°РєРѕРіРѕ РїСѓРЅРєС‚Р° РЅРµС‚.\n";
 		}
 	} while (choice != 0);
 
